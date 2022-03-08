@@ -48,7 +48,8 @@ export class WallSpider extends Spider{
     }
 
     moveBackwards(): void {
-        this.direction = [-this.direction[0], -this.direction[1]]
+        this.turnLeft();
+        this.turnLeft();
         this.moveForwards();
     }
 
