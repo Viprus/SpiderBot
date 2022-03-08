@@ -1,13 +1,18 @@
 export class Spider{
     positionX: number = 0;
     positionY: number = 0;
+    instructionString: string = ""
 
     constructor(positionX: number = 0, positionY: number = 0, instructionString: string = "") {
         this.positionX = positionX;
         this.positionY = positionY;
+        this.instructionString = instructionString;
+    }
+
+    initialize(){
         console.log("Spider Initialized!")
         this.reportPosition();
-        this.processCommandString(instructionString);
+        this.processCommandString(this.instructionString);
         this.reportPosition();
     }
 

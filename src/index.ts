@@ -1,4 +1,5 @@
 import { Spider } from "./spider";
+import { WallSpider } from "./wallSpider";
 
 // Test Data:
 // 0,0,FRFRFFFFFFFLLLLFFFFFRFFFFLFFLRRF = ?
@@ -6,8 +7,11 @@ import { Spider } from "./spider";
 // 0,7,RRRRRRRRFFFFFFFFFFFLLLBBBBBRRRLLLLLFFLR =?
 
 var spider1 = new Spider(0,0,"FRFRFFFFFFFLLLLFFFFFRFFFFLFFLRRF");
+spider1.initialize();
 var spider2 = new Spider(3,6,"FFFFFFFFRRRRRRRFFFFLLLBBRRRRRLLLLLLLLLRFFF");
+spider2.initialize();
 var spider3 = new Spider(0,7,"RRRRRRRRFFFFFFFFFFFLLLBBBBBRRRLLLLLFFLR");
+spider3.initialize();
 
 // Assumptions:
 // Test Chamber- It says in the spec that 0,0 is the bottom left, but doesn't mention any walls. I'll assume it can move into negative numbers
@@ -15,3 +19,10 @@ var spider3 = new Spider(0,7,"RRRRRRRRFFFFFFFFFFFLLLBBBBBRRRLLLLLFFLR");
 // Movement Direction -- Assuming that the bot is aligned correctly, so Forwards/Backwards movement is on Y axis, Left and Right on X axis.
 // Realistically we'd have to account for acceleration/deceleration and gained momentum- longer stretched of a single command may have greater impact of position, harder to stop.
 // Keeping it simple!
+
+var wallSpider1 = new WallSpider(0,0,"FRFRFFFFFFFLLLLFFFFFRFFFFLFFLRRF");
+wallSpider1.initialize();
+var wallSpider2 = new WallSpider(3,6,"FFFFFFFFRRRRRRRFFFFLLLBBRRRRRLLLLLLLLLRFFF");
+wallSpider2.initialize();
+var wallSpider3 = new WallSpider(0,7,"RRRRRRRRFFFFFFFFFFFLLLBBBBBRRRLLLLLFFLR");
+wallSpider3.initialize();
