@@ -1,3 +1,4 @@
+import { MarsSpider } from "./marsSpider";
 import { Spider } from "./spider";
 import { WallSpider } from "./wallSpider";
 
@@ -26,3 +27,8 @@ var wallSpider2 = new WallSpider(3,6,"FFFFFFFFRRRRRRRFFFFLLLBBRRRRRLLLLLLLLLRFFF
 wallSpider2.initialize();
 var wallSpider3 = new WallSpider(0,7,"RRRRRRRRFFFFFFFFFFFLLLBBBBBRRRLLLLLFFLR");
 wallSpider3.initialize();
+
+var marsSpider1 = new MarsSpider(0,0, "FFFFFF3FLFFFFFFR5FL");
+marsSpider1.initialize();
+var marsSpider2 = new MarsSpider(4,3, "FFFFFFFF5FRFFFFFF3FRFFFFFFLFFFFF5FFF5FFFFFFFLFFFFF");
+marsSpider2.initialize();
